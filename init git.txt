@@ -1,0 +1,29 @@
+git国内镜像地址：
+https://github.com/waylau/git-for-win
+
+设置用户名和邮箱：
+$ git config --global user.name author #将用户名设为author
+$ git config --global user.email author@corpmail.com #将用户邮箱设为author@corpmail.com
+
+初始化本地仓库：
+创建本地目录：
+$ git init
+$ git add
+$ git commit -m "loading xxxxxxxx"
+
+创建本地SSH key，为了让两个linux机器之间使用ssh不需要用户名和密码，将对应邮箱改为自己的邮箱地址，提交到git hub
+$ ssh-keygen -t rsa -C "songrayzhh@126.com"
+生成key后，到C盘下面找到.ssh\id_rsa.pub
+
+
+在git hub上创建远程仓库：
+#见图片
+
+
+本地git连接远程仓库
+$ git remote add origin xxxxxxx   #xxxxxxx是从远程仓库提供的连接SSH/https链接
+$ git branch -M main
+$ git push -u origin main  #如果有提示继续连接，要手动输入yes，否则没有写入权限
+
+如果需要删除某个远程仓库：
+$ git remote rm origin
